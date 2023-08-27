@@ -67,7 +67,58 @@ Other Names For Call Stack:
 - Runtime stack
 - machine Stack
 
+EXAMPLE:
+
+1. Whenever you call a function for its execution, you are pushing it to the stack.
+2. Whenever the execution is completed, the function is popped out of the stack.
+
+```js
+function start() {
+  next();
+}
+function next() {
+  return "I am next";
+}
+
+// Invoke the `start` function
+start();
+```
+
+1. Add the start() function to the call stack list and execute the code.
+2. Add the next() function to the call stack list and execute the code.
+3. Delete the next() function from our call stack list.
+4. Delete the start() function from the call stack list since there are no items anymore.
+
 ![CALL STACK](../../../Images/CallStack.png)
 ![CALL STACK](../../../Images/callStackEg.png)
 
 #### Event Loop
+
+The event loop is a process that continuously monitors both the call stack and the event queue and checks whether or not the call stack is empty. If the call stack is empty and there are pending events in the event queue, the event loop dequeues the event from the event queue and pushes it to the call stack. The call stack executes the event, and any additional events generated during the execution are added to the end of the event queue.
+
+![EVENT LOOP](../../../Images/EventLoop.png)
+
+1.  All the callback function which comes through promises will go inside Microtask Queue(more priority)
+2.  Other callback function will go inside callback queue
+
+#### what is Event Queue?
+
+The event queue follows the queue data structure. It stores async callbacks to be added to the call stack. It is also known as the Callback Queue or Macrotask Queue.
+
+Whenever the call stack receives an async function, it is moved into the Web API. Based on the function, Web API executes it and awaits the result. Once it is finished, it moves the callback into the event queue (the callback of the promise is moved into the microtask queue).
+
+The event queue constantly checks whether or not the call stack is empty. Once the call stack is empty and there is a callback in the event queue, the event queue moves the callback into the call stack. If there is a callback in the microtask queue as well, it is moved first. The microtask queue has a higher priority than the event queue.
+
+#### Memory Storage(garbage collection)
+
+Higher level languages like JS automatically allocates memory when objects are created and free it when they are not used anymore. This is called Garbage Collection.
+
+DATA TYPES:
+
+1. Primitive Types: Stored directly in the "Stack", where it is accessed from.
+2. Reference Types: Stored in the heap and accessed by reference.
+
+Primitive types are stored in the stack because they are fixed but reference are not a fixed value in array, object or function so it needs more memory.
+
+![HEAP](../../../Images/Heap.png)
+![HEAP](../../../Images/Heap2.png)
