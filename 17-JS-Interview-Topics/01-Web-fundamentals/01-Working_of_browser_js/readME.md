@@ -3,6 +3,16 @@
 What is javascript?
 JavaScript is a dynamic typed single-threaded language. It was developed by Brendan Eich in september 1995.Initially, it was called Mocha, then LiveScript, and was later renamed JavaScript.
 
+#### What happens behind the scene when you hit URL in the browser?
+
+When you type a website's address into your browser.The browser parses the URL to understand the protocol . The browser checks its local cache to see if it already knows the IP address associated with the domain name. If it is not in cached , the browser sends a DNS (Domain Name System) query to a DNS server to resolve the domain name into an IP address. The browser initiates a TCP connection with the server. And the browser send an HTTP request to the webserver. The server sends out an HTTP response and display HTML content
+
+- It looks for four types of cache
+  1. Browser cache
+  2. OS cache
+  3. router cache
+  4. ISP cache
+
 #### How javscript code works in browser?
 
 JAVASCRIPT CODE ----> PARSER ----> JS ENGINE
