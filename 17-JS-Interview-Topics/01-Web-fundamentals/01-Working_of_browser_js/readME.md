@@ -3,7 +3,7 @@
 What is javascript?
 JavaScript is a dynamic typed single-threaded language. It was developed by Brendan Eich in september 1995.Initially, it was called Mocha, then LiveScript, and was later renamed JavaScript.
 
-#### What happens behind the scene when you hit URL in the browser?
+### What happens behind the scene when you hit URL in the browser?
 
 When you type a website's address into your browser.The browser parses the URL to understand the protocol . The browser checks its local cache to see if it already knows the IP address associated with the domain name. If it is not in cached , the browser sends a DNS (Domain Name System) query to a DNS server to resolve the domain name into an IP address. The browser initiates a TCP connection with the server. And the browser send an HTTP request to the webserver. The server sends out an HTTP response and display HTML content
 
@@ -13,7 +13,7 @@ When you type a website's address into your browser.The browser parses the URL t
   3. router cache
   4. ISP cache
 
-#### How javscript code works in browser?
+### How javscript code works in browser?
 
 JAVASCRIPT CODE ----> PARSER ----> JS ENGINE
 
@@ -25,7 +25,7 @@ Firstly the Jscode is parsed and check if the syntax of the code is correct.Now 
 
 ![THREAD OF EXECUTION](../../../Images/ThreadOfExecution.png)
 
-#### What is Execution Context?
+### What is Execution Context?
 
 When the JS Engine scans a script file it makes an environment called Execution Context that handles the entire tranformation and execution of the code.
 
@@ -42,7 +42,7 @@ A function execution context is created whenever a function is called, represent
 
 When a javascript file is created there will be only one Global Execution Context but there could be many Function Execution Context.
 
-#### How Execution Context is created?
+### How Execution Context is created?
 
 There will be two phases when a Execution Context is created, One is Creation Phase and the other one is Execution Phase
 
@@ -57,7 +57,7 @@ In this phase, JavaScript executes the code line by line, performing assignments
 
 Execution Context has many Function Execution Context and it is managed by Execution Stack.
 
-#### What is Call stack?
+### What is Call stack?
 
 A Call Stack is a stack with LIFO(Last In First Out) structure, which is used to store all the Execution Context created during the code Execution.
 
@@ -102,7 +102,7 @@ start();
 ![CALL STACK](../../../Images/CallStack.png)
 ![CALL STACK](../../../Images/callStackEg.png)
 
-#### Event Loop
+### Event Loop
 
 The event loop is a process that continuously monitors both the call stack and the event queue and checks whether or not the call stack is empty. If the call stack is empty and there are pending events in the event queue, the event loop dequeues the event from the event queue and pushes it to the call stack. The call stack executes the event, and any additional events generated during the execution are added to the end of the event queue.
 
@@ -111,7 +111,7 @@ The event loop is a process that continuously monitors both the call stack and t
 1.  All the callback function which comes through promises will go inside Microtask Queue(more priority)
 2.  Other callback function will go inside callback queue
 
-#### what is Event Queue?
+### what is Event Queue?
 
 The event queue follows the queue data structure. It stores async callbacks to be added to the call stack. It is also known as the Callback Queue or Macrotask Queue.
 
@@ -119,7 +119,7 @@ Whenever the call stack receives an async function, it is moved into the Web API
 
 The event queue constantly checks whether or not the call stack is empty. Once the call stack is empty and there is a callback in the event queue, the event queue moves the callback into the call stack. If there is a callback in the microtask queue as well, it is moved first. The microtask queue has a higher priority than the event queue.
 
-#### Memory Storage(garbage collection)
+### Memory Storage(garbage collection)
 
 Higher level languages like JS automatically allocates memory when objects are created and free it when they are not used anymore. This is called Garbage Collection.
 
