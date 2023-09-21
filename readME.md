@@ -21,6 +21,14 @@
 
 # JS-INTERVIEW--TOPICS
 
-| # S.NO |                                   Topics                                   |
-| ------ | :------------------------------------------------------------------------: |
-| 01     | [Web-Fundamentals](./17-JS-Interview-Topics/01-Web-fundamentals/readMe.md) |
+| # S.NO |                                      Topics                                      |
+| ------ | :------------------------------------------------------------------------------: |
+| 01     |    [Web-Fundamentals](./17-JS-Interview-Topics/01-Web-fundamentals/readMe.md)    |
+| 02     |    [Scope & Execution](./17-JS-Interview-Topics/02-Scope&Execution/readME.md)    |
+| 03     |            [Run Time](./17-JS-Interview-Topics/03-Runtime/readMe.md)             |
+| 04     |         [Asyncronous](./17-JS-Interview-Topics/04-Asyncronous/readME.md)         |
+| 05     |           [Functions](./17-JS-Interview-Topics/05-Functions/readME.md)           |
+| 06     | [Object Referentials](./17-JS-Interview-Topics/06-Objects-Referential/readME.md) |
+| 07     |             [Storage](./17-JS-Interview-Topics/07-Storage/readME.md)             |
+| 08     |     [Web Performance](./17-JS-Interview-Topics/08-Web-performance/readME.md)     |
+| 09     |        [Web Security](./17-JS-Interview-Topics/09-Web-Security/readME.md)        |
